@@ -1,10 +1,10 @@
 <?php
-
+session_start();
 require 'config.php';
 
 
 //Definindo constante para o caminho padrão do projeto
-define("BASE_URL", "http://localhost/ProjectSystem");
+//define("BASE_URL", "http://localhost/ProjectSystem");
 //Definindo o Autoload
 //spl_autoload_register — Registra a função dada como implementação de __autoload()
 spl_autoload_register(function($class) {

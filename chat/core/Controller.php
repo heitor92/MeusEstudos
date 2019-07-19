@@ -1,6 +1,7 @@
 <?php
 
 class Controller {
+    
     //Método para Chamar uma View
     public function loadView($viewName, $viewData = []) {
         //extract — Importa variáveis para a tabela de símbolos a partir de um array
