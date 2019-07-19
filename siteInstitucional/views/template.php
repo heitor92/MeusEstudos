@@ -11,11 +11,11 @@
         </div>
         <div class="menu">
             <ul>
-                <a href="/siteInstitucional"><li>HOME</li></a>
-                <a href="/siteInstitucional/portfolio"><li>PORTFOLIO</li></a>
-                <a href="/siteInstitucional/sobre"><li>SOBRE</li></a>
-                <a href="/siteInstitucional/servicos"><li>SERVIÇOS</li></a>
-                <a href="/siteInstitucional/contato"><li>CONTATO</li></a>
+                <a href="/MeusEstudos/siteInstitucional"><li>HOME</li></a>
+                <a href="/MeusEstudos/siteInstitucional/portfolio"><li>PORTFOLIO</li></a>
+                <a href="/MeusEstudos/siteInstitucional/sobre"><li>SOBRE</li></a>
+                <a href="/MeusEstudos/siteInstitucional/servicos"><li>SERVIÇOS</li></a>
+                <a href="/MeusEstudos/siteInstitucional/contato"><li>CONTATO</li></a>
             </ul>
         </div>
         <div class="container">
