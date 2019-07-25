@@ -64,5 +64,11 @@ function keyUpChat(obj, event){
         $('.chatarea').append('<div class="msgitem"> \
         '+ hr +' <strong>'+ nome +'</strong>: \
         '+ msg +'</div>');
+
+        $.ajax({
+            url: '/MeusEstudos/chat/ajax/sendmessage',
+            type: 'POST',
+            data: {msg:msg}
+        });
     }
 }
