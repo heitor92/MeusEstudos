@@ -59,7 +59,7 @@ function keyUpChat(obj, event){
 
         var dt = new Date();
         var hr = dt.getHours() + ':' + dt.getMinutes();
-        var nome = '...';
+        var nome = $('.inputarea').attr('data-nome');
 
         $('.chatarea').append('<div class="msgitem"> \
         '+ hr +' <strong>'+ nome +'</strong>: \
