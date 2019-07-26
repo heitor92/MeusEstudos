@@ -9,4 +9,22 @@ class Mensagens extends Model {
         
     }
 
+    public function getMessage($idChamado, $lastMsg){
+        $array = [];
+
+        $sql = "SELECT * FROM mensagens WHERE id_chamado = {$idChamado} AND data_enviado > '{$lastMsg}'";
+        $sql = $this->db->query($sql);
+
+        if($sql->rowCount() > 0){
+            $array = $sql->fetchAll();
+        }
+
+        $chamado = new Chamados();
+        $area = $_SESSION['area'];
+        $chamado->updateLastMsg($idChamado, $area);
+
+
+        return $array;
+    }
+
 }

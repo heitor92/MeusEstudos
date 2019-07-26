@@ -39,4 +39,18 @@ class AjaxController extends Controller {
         }
     }
 
+    public function getMessage(){
+        $dados = [];
+        $mensagem = new Mensagens();
+        $chamado = new Chamados();
+
+        $idChamado = $_SESSION['chatwindow'];
+        $area = $_SESSION['area'];
+        $lastmsg = $chamado->getLastMsg($idChamado, $area);
+
+        
+        $dados['mensagens'] = $mensagem->getMessage($idChamado, $lastmsg);
+        echo json_encode($dados);
+    }
+
 }

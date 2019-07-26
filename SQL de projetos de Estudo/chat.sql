@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 25/07/2019 às 19:44
+-- Tempo de geração: 26/07/2019 às 21:44
 -- Versão do servidor: 10.3.16-MariaDB
 -- Versão do PHP: 7.3.7
 
@@ -33,19 +33,21 @@ CREATE TABLE `chamados` (
   `ip` varchar(20) NOT NULL,
   `nome` varchar(50) DEFAULT NULL,
   `data_inicio` time NOT NULL,
-  `status` tinyint(1) NOT NULL
+  `status` tinyint(1) NOT NULL,
+  `data_last_suporte` datetime NOT NULL,
+  `data_last_cliente` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Despejando dados para a tabela `chamados`
 --
 
-INSERT INTO `chamados` (`id`, `ip`, `nome`, `data_inicio`, `status`) VALUES
-(1, '0', 'Fulano', '10:00:00', 0),
-(2, '1', 'Cicrano', '11:00:00', 1),
-(3, '2', 'Beltrano', '12:00:00', 1),
-(4, '192.168.0.14', 'heitor', '03:51:51', 0),
-(5, '192.168.0.14', 'heitor', '03:53:33', 0);
+INSERT INTO `chamados` (`id`, `ip`, `nome`, `data_inicio`, `status`, `data_last_suporte`, `data_last_cliente`) VALUES
+(1, '0', 'Fulano', '10:00:00', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, '1', 'Cicrano', '11:00:00', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, '2', 'Beltrano', '12:00:00', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, '192.168.0.14', 'heitor', '03:51:51', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, '192.168.0.14', 'heitor', '03:53:33', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
