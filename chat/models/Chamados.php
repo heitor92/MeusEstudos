@@ -49,9 +49,8 @@ class Chamados extends Model {
     public function getLastMsg($idChamado, $area){
         $dt = '';
         if(!empty($idChamado) && !empty($area)){
-            $sql = "SELECT data_last_{$area} as dt FROM chamados WHERE id_chamado = {$idChamado}";
-            $sql->db->query($sql);
-
+            $sql = "SELECT data_last_{$area} as dt FROM chamados WHERE id = {$idChamado}";
+            $sql = $this->db->query($sql);
             if($sql->rowCount() > 0){
                 $sql = $sql->fetch();
                 $dt = $sql['dt'];
@@ -63,8 +62,9 @@ class Chamados extends Model {
 
     public function updateLastMsg($idChamado, $area){
         if(!empty($idChamado) && !empty($area)){
-        $sql = "UPDATE chamados SET data_set_{$area} =  NOW() WHERE id = {$idChamado}";
+        $sql = "UPDATE chamados SET data_last_{$area} =  NOW() WHERE id = {$idChamado}";
             $this->db->query($sql);
         }
+
     }
 }

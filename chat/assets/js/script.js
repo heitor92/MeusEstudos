@@ -81,9 +81,14 @@ function updateChat() {
         success: function (json) {
             if (json.mensagens.length > 0) {
                 for (var i in json.mensagens) {
-                    var hr = json.mensagens[i].hr;
-                    var nome = json.mensagens[i].nome;
-                    var msg = json.mensagens[i].msg;
+                    var hr = json.mensagens[i].data_enviado;
+                    if(json.mensagens[i].origem == 0){
+                        var nome = 'Suporte';
+                    } else{
+                        var nome = $('.inputarea').attr('data-nome');
+                    }
+                    
+                    var msg = json.mensagens[i].mensagem;
                     $('.chatarea').append('<div class="msgitem"> \
                 '+ hr + ' <strong>' + nome + '</strong>: \
                 '+ msg + '</div>');
