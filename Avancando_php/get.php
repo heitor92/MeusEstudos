@@ -14,7 +14,11 @@ if($planeta != false){
     echo "Planeta não informado!";
 }
 
-$cor = $_GET['cor'] ?? "Cor não informada!";
+//echo '<br>';
+
+//$cor = $_GET['cor'] ?? "Cor não informada!";
+
+//echo $cor;
 
 //coalesce (??) do PHP 7
 //o PHP entende que eu vou testar essa variavel com esse índice se ele existe ou não.
