@@ -10,6 +10,8 @@ session_save_path — Obtém e/ou define o caminho para armazenamento da sessão
 
 */
 //var_dump(session_save_path());
-//session_start();
+session_start();
+
+var_dump($_SESSION);
 //var_dump($_SESSION['usuario']);
 
